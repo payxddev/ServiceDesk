@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: storage-service
+server:
+  port: 8084
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: localhost
+    lease-renewal-interval-in-seconds: 30
+
+minio:
+  url: http://localhost:9000
+  accessKey: g55MTXO2O5yWsmAtwCr6
+  secretKey: 4kfz5Hw11HHA4RXTV0ioW9885vGvsty4kq48HuIW
+  bucketName: servicedesk
